@@ -781,6 +781,12 @@ footer {
         font-weight: 700;
         transform: perspective(600px) rotateY(0deg);
     }
+    .front p{
+        width: auto;
+        height: 15vw;
+        border-radius: 5px;
+        background-color:#967e65;
+    }
     .caja:hover .front {
         box-shadow: 5px 5px 25px #c5a583;
         background-color: #f4e8c1;
@@ -793,7 +799,9 @@ footer {
     .card p {
         font-size: 2em;
         margin: 1em;
-    }
+        user-select: none;
+    } 
+    
     
     .back{
         justify-content: space-around;
