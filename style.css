@@ -23,10 +23,16 @@ Header {
     padding-left: .3vw;
 }
 
-.barra-logo {
+.barra-abrir,  .barra-cerrar {
     z-index: -10;
 }
-
+.nav {
+    max-width: 100vw;
+    position: absolute;
+    left: 20%;
+    text-decoration: none;
+    display: flex;
+}
 .nav ul {
     width: 100%;
     display: flex;
@@ -37,18 +43,9 @@ Header {
     width: 100%;
     list-style: none;
     display: inline-block;
-
-
-}
-
-.nav {
-    max-width: 100vw;
-    position: absolute;
-    left: 33%;
-    text-decoration: none;
+    font-size: 1vw;
 
 }
-
 .nav li a {
     text-decoration: none;
     font-family: syne;
@@ -57,9 +54,8 @@ Header {
     border: 1px;
     border-color: black;
     margin: 1rem;
-    font-size: 1.2em;
+    font-size: 2em;
 }
-
 
 
 .bienvenida {
@@ -140,7 +136,7 @@ Header {
     background-repeat: no-repeat;
 }
 
-#Productos{
+#Productos {
     width: 100%;
     height: 100vh;
     background-color: #311a01;
@@ -151,22 +147,25 @@ Header {
     align-items: center;
     gap: 4em;
 }
-#Productos h2{
+
+#Productos h2 {
     margin: 0;
     color: white;
     text-align: center;
     font-size: 3em;
 }
-.contenedor-caja{
+
+.contenedor-caja {
     width: 90%;
     height: 70%;
     max-height: 45vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+
 }
-.caja{
+
+.caja {
     width: 30%;
     height: 90%;
     box-shadow: 1px 1px 5px #c5a583;
@@ -180,6 +179,7 @@ Header {
     font-size: 1em;
     position: relative;
 }
+
 .card {
     width: 100%;
     height: 100%;
@@ -199,11 +199,13 @@ Header {
     object-fit: cover;
     border-radius: 5%;
 }
-.front{
+
+.front {
     font-size: 1.3em;
     font-weight: 700;
     transform: perspective(600px) rotateY(0deg);
 }
+
 .caja:hover .front {
     box-shadow: 5px 5px 25px #c5a583;
     background-color: #f4e8c1;
@@ -213,17 +215,19 @@ Header {
     transform: perspective(600px) rotateY(180deg);
     transition: 1.2s;
 }
+
 .card p {
     font-size: 2em;
     margin: 1em;
 }
 
-.back{
+.back {
     justify-content: space-around;
     transform: perspective(600px) rotateY(180deg);
 }
+
 .caja:hover .back {
-    border-radius:5% ;
+    border-radius: 5%;
     box-shadow: 5px 5px 25px #c5a583;
     background-color: #f4e8c1;
     color: #311a01;
@@ -233,12 +237,13 @@ Header {
     transition: 1.2s;
 }
 
-.back h3{
-font-size: 2em;
+.back h3 {
+    font-size: 2em;
 }
-.back p{
+
+.back p {
     font-size: 1.5em;
-    
+
 }
 
 
@@ -565,6 +570,7 @@ footer {
         justify-content: space-between;
         background-color: #f4e8c1;
         font-size: 1vw;
+        z-index: 200;
     }
 
     .logo {
@@ -572,47 +578,66 @@ footer {
         padding-left: 1.5em;
     }
 
-    .barra-logo {
+    .barra-abrir {
+        margin: 5px;
         z-index: 1;
+        position: absolute;
+        right: 0;
+        display: flex;
     }
-
+    .barra-cerrar {
+        margin: 5px;
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        display: none;
+    }
 
     .nav {
-        position: relative;
-        top: -100%;
+        position: fixed;
+        top: 10%;
+        bottom: 0%;
+        right: 0%;
+        width: 70vw;
+        height: 90%;
+        background-color: #f4e8c1;
+        border: 1px solid #c5a583;
+        z-index: 10;
+        text-align: center;
+        display: none;
     }
+
 
     .nav ul {
         width: 100%;
+        height: 100%;
         display: flex;
-        padding: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
     }
 
     .nav li {
-        width: 100%;
+        width: 90%;
         list-style: none;
         display: inline-block;
 
 
     }
 
-    .nav {
-        max-width: 100vw;
-        position: absolute;
-        left: 33%;
-        text-decoration: none;
 
-    }
 
     .nav li a {
         text-decoration: none;
         font-family: syne;
-        padding-bottom: 2px;
+        text-align: center;
         color: black;
-        border: 1px;
+        margin: 0%;
         border-color: black;
-        margin: 1rem;
-        font-size: 1.2em;
+
+        font-size: 9em;
     }
 
 
@@ -636,7 +661,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         font-size: 1vw;
-
+        margin: 10px;
     }
 
     .conteiner-bienvenida h1 {
@@ -712,7 +737,7 @@ footer {
         background-repeat: no-repeat;
     }
 
-    #Productos{
+    #Productos {
         width: 100%;
         height: auto;
         background-color: #311a01;
@@ -724,13 +749,15 @@ footer {
         gap: 4em;
         padding: 5em;
     }
-    #Productos h2{
+
+    #Productos h2 {
         margin: 0;
         color: white;
         text-align: center;
         font-size: 8em;
     }
-    .contenedor-caja{
+
+    .contenedor-caja {
         width: 100%;
         height: auto;
         max-height: none;
@@ -739,9 +766,10 @@ footer {
         align-items: center;
         justify-content: space-around;
         gap: 5em;
-        
+
     }
-    .caja{
+
+    .caja {
         width: 90%;
         height: 100vw;
         box-shadow: 1px 1px 5px #c5a583;
@@ -756,6 +784,7 @@ footer {
         position: relative;
         font-size: 3.5vw;
     }
+
     .card {
         width: 100%;
         height: 100%;
@@ -766,27 +795,30 @@ footer {
         backface-visibility: hidden;
         transition: .5s;
         overflow: hidden;
-        
+
     }
-    
-    
+
+
     .card img {
         width: 100%;
         max-height: 70%;
         object-fit: cover;
         border-radius: 5%;
     }
-    .front{
+
+    .front {
         font-size: 1.3em;
         font-weight: 700;
         transform: perspective(600px) rotateY(0deg);
     }
-    .front p{
+
+    .front p {
         width: auto;
         height: 15vw;
         border-radius: 5px;
-        background-color:#967e65;
+        background-color: #967e65;
     }
+
     .caja:hover .front {
         box-shadow: 5px 5px 25px #c5a583;
         background-color: #f4e8c1;
@@ -796,19 +828,21 @@ footer {
         transform: perspective(600px) rotateY(180deg);
         transition: 1.2s;
     }
+
     .card p {
         font-size: 2em;
         margin: 1em;
         user-select: none;
-    } 
-    
-    
-    .back{
+    }
+
+
+    .back {
         justify-content: space-around;
         transform: perspective(600px) rotateY(180deg);
     }
+
     .caja:hover .back {
-        border-radius:5% ;
+        border-radius: 5%;
         box-shadow: 5px 5px 25px #c5a583;
         background-color: #f4e8c1;
         color: #311a01;
@@ -817,13 +851,14 @@ footer {
         transform: perspective(600px) rotateY(0deg);
         transition: 1.2s;
     }
-    
-    .back h3{
-    font-size: 2em;
+
+    .back h3 {
+        font-size: 2em;
     }
-    .back p{
+
+    .back p {
         font-size: 1.4em;
-        
+
     }
 
 
