@@ -93,7 +93,7 @@ Header {
     min-height: 35vw;
     background-color: black;
     border-radius: 50% 50% 0 0;
-    background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=606,h=664,fit=crop/AGBGMLaK7QfEwMnk/generated/generated-YKbJ1LjBqnTzZxy2.png");
+    background-image: url("/imagenes/imagenbienvenida.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -693,7 +693,7 @@ footer {
         height: 80vw;
         background-color: black;
         border-radius: 50% 50% 0 0;
-        background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=606,h=664,fit=crop/AGBGMLaK7QfEwMnk/generated/generated-YKbJ1LjBqnTzZxy2.png");
+        background-image: url("/imagenes/imagenbienvenida.jpg");
         background-repeat: no-repeat;
         background-size: cover;
 
